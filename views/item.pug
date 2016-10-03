@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+  .jumbotron
+    h1.text-center Adicionar Item
+  form(action="/adicionaritem" method="post")
+    .form-group
+      label(for="nome") nome do aparelho
+      input(name="nome" id="nome" type="text" placeholder="Digite o nome do aparelho" required).form-control
+    .form-group
+      label(for="watts") quantidade watts
+      input(name="watts" id="watts" type="number" placeholder="digite a quantidade de watts gasto por minuto" required).form-control
+    .form-group
+      label(for="tempo") tempo de uso
+      input(name="tempo" id="tempo" type="number" placeholder="Digite o tempo de uso mensal do produto em minutos" required).form-control
+    .form-group
+      label(for="custo") custo do watts
+      input(name="custo" id="tempo" type="text" onkeypress="mascara(this, '#####.######/####-##')" placeholder="Digite o custo de watts por minuto" required).form-control
+    .form-group
+      .col-md-3
+      a(href="/").btn.btn-info.col-md-3 voltar
+      .col-md-1
+      input(type="submit" value="confirmar").btn.btn-danger.col-md-3

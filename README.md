@@ -1,3 +1,3 @@
-#Node Base Web Project
+# PlanilhaGastoEnergia
 
-- Projeto feito para agilizar o inicio do desenvolvimento, e reduzir a perca de tempo rescrevendo codigo
+- um programa feito para calcular o quanto foi gasto de energia de cada aparelho e listar o total gasto

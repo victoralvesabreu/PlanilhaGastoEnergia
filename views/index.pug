@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+  .jumbotron
+    h1.text-center #{title}
+  a(href="/adicionarItem", class="btn btn-default") Cadastrar Novo Item
+  .table-responsive
+    table.table.table-hover.table-striped.table-bordered.table-condencend
+      th nome
+      th watts
+      th tempo
+      th custo por minuto
+      th custo total
+        each val in item
+          tr
+            td=val.nome
+            td=val.watts
+            td=val.tempo
+            td= "R$ " + val.custo
+            td= "R$ " + val.gastoTotal
+        else
+          label nenhum cadastrado
+    h4.text-right R$ #{total}
